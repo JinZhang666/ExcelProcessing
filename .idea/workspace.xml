@@ -4,43 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/UpdateSQliteTables/updateLeftMarketPer.py" line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d442a44-6159-4fcc-9365-77cdc1d83abb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/exceldoc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelToSQLite/import模板.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteDataProcessing/clientLoginEventUtility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteDataProcessing/clientTradeEventUtility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteDataProcessing/userDayATradeUtility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteDataProcessing/userDayInCapitalUtility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/aTradeQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/inertialTestersQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/kcbActQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/newAccountQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/simTradeQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/getSimTradeSheetFromSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/getaTradeSheetFromSQLite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/source.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/source2.txt" afterDir="false" />
-    </list>
+    <list default="true" id="5d442a44-6159-4fcc-9365-77cdc1d83abb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,110 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="73" column="13" selection-start-line="71" selection-start-column="8" selection-end-line="73" selection-end-column="13" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteQuery/inertialTestersQuery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/deshlw.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayATradeUtility.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/desyyb.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="360" selection-end-line="405" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/source.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="95">
+                <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -250,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="698" />
     <option name="width" value="1197" />
     <option name="height" value="1070" />
@@ -435,21 +303,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.86159843" visible="true" weight="0.21466315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.88511324" visible="true" weight="0.15719947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.13840155" side_tool="true" visible="true" weight="0.21466315" />
+      <window_info id="Favorites" order="2" sideWeight="0.11488673" side_tool="true" visible="true" weight="0.15719947" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.04249292" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497358" visible="true" weight="0.2733711" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497358" visible="true" weight="0.12464589" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993395" weight="0.07648725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50264204" side_tool="true" visible="true" weight="0.2733711" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50264204" side_tool="true" visible="true" weight="0.12464589" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -476,13 +345,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="1353" selection-start-line="1353" selection-end-line="1353" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UpdateSQliteTables/updateLeftAccount.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -853,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/desyyb.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="360" selection-end-line="405" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SQLiteToExcel/deshlw.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -871,16 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,6 +756,33 @@
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/desyyb.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="360" selection-end-line="405" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="95">
+            <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
