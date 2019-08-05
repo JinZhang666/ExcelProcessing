@@ -356,19 +356,17 @@ Notice：该项目是由python写成的excel数据处理工具，同时引入sql
 ## 运行操作指南
    【TODO】把下面手动跑程序步骤写成程序
    * 生成sheet2: 输出（全量）新用户奇点当月（增量）登陆到SHEET2
-      1. 在input/newAcc.xlsx 中放入【当期】新开户用户, 在input/clientLogin/中放入【当月】的登录记录
-      2. 运行importNewAccountToSQLite.py 
+      1. 在input/newAcc.xlsx 中放入【当期】新开户用户, （保证sheet名是'newAcc') 在input/clientLogin/中放入【当月】的登录记录,在月份交会的时候，可能会在同一个excel中混入两个月份的登录记录，保证月底那几天不要有重复
+      2. 运行importNewAccountToSQLite.py
       3. 运行importClientLoginFolderToSQLite.py，确保所有的login表格都是xlsx格式，里面的sheet名和外部文档名相同。
       4. 把【当期】新添的clientlogin放在hislogin中，运行importHisClientLoginEventToSQLite.py
       5. 保证数据库中的marketdep表格有数据，没有的话运行importMarketDepToSQLite.py 
       6. 运行getSheet2FromSQLite.py
       
-   * 生成sheet3: 输出新注册模拟交易天数到SHEET3 (全量）
+   * 生成sheet3: 输出新注册(全量）模拟交易天数（本月）到SHEET3 
       1. 在input/newReg.xlsx 中放入【当期】新注册用户; 在input/simTrade.xlsx中放入模拟交易天数表
-      2. 运行importMarketDepToSQLite.py （保证更新）
-      3. 运行importMarketPerToSQLite.pytidrr （保证更新）
       4. 运行importNewregToSQLite.py （核对数量）
-      5. 运行importSimTradeToSQLite.py (核对数量)(保证simTrade文档位xlsx格式，保证里面的sheet叫做simTrade)  
+      5. 运行importSimTradeToSQLite.py (核对数量)(保证simTrade文档位xlsx格式，保证里面的sheet叫做仿真用户)  
       6. 运行getSheet3FromSQLite.py 
       
   * 生成ACC + VAL，输出新开户用户转化
