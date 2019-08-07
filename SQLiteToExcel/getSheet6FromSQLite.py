@@ -18,6 +18,8 @@ from ExcelToSQLite.importATradeToSQLite import *
 from SQLiteDataProcessing.clientLoginEventUtility import  *
 from ExcelToSQLite.importHisclientLoginEventToSQLite import *
 from SQLiteQuery.newAccountQuery import  *
+from ExcelToSQLite.importACCVALToSQLite import *
+from SQLiteQuery.accValQuery import *
 
 def getACCVALFromSQLite():
     # sheet6 accounts = sheet6注销的 + sheet6里出现但是在sheet2里找关系 + sheet2里记录的新用户
@@ -30,10 +32,13 @@ def getACCVALFromSQLite():
         #importAccountToSQLite()
         # import last acc+val 表格进入account table
         importAccountToSQLiteFromACCVAL()
+        # import last acc+val 表格进入accval
+        importAccValToSQLite()
         # import modified sheet2 to newaccount table
         getSheet2FromSQLite().generateSheet2ExcelFromSQLite() #把处理过的数据写到newaccount表里面, 同时更新leftaccount 和 leftmarketper
         # updateaccount 通过和newaccount的比较，分辨出leftaccounts 和 realnewaccounts
         ua = updateAccount()
+        accvalquery = accValQuery()
 
         '''
         准备好各种转换率指标
@@ -45,7 +50,7 @@ def getACCVALFromSQLite():
         # 有效交易日期
         importTradeLogToSQLite()
         effectiveTradeUsersDict = clientTradeEventUtility().geteffectiveTradeUsersAndDates()
-        #print("effectiveTradeUsersDict", effectiveTradeUsersDict)
+        print("effectiveTradeUsersDict", effectiveTradeUsersDict)
         # 有效跟投日期
         importATradeLogToSQLite()
         effectiveATradeUsersDict = userDayATradeUtility().geteffectiveATradeUsersAndDates()
@@ -74,9 +79,6 @@ def getACCVALFromSQLite():
         leftMarketPersUsers = una.getAllLeftMarketPersUsers()
         print("leftMarketPersUsers", leftMarketPersUsers)
 
-        userValueDict = {}
-        for khcode, value in db.execute("SELECT * FROM accountvalue"):
-            userValueDict[str(khcode).strip()] = str(value).strip()
 
         # 抬头补充
         workbookdes = xlwt.Workbook()
@@ -112,11 +114,10 @@ def getACCVALFromSQLite():
         dst.write(0, 27, 'PHONE')  # I
         dst.write(0, 28, '海报id')  # I
 
-
         select_account_template = 'SELECT * FROM account'
         select_newaccount_template = 'SELECT * FROM newaccount WHERE khcode = ?'
         currentMonth: str = '07'
-
+        nextMonth: str = '08'
 
         '''
         遍历整个account
@@ -149,45 +150,86 @@ def getACCVALFromSQLite():
                 effectiveCapitalFlag = 0
                 effectiveLoginFlag = 0
 
-
-
                 # 有效跟投补充 #
-                if str(khcode).strip() in effectiveATradeUsersDict:
-                    effectiveatradeFlag = 1
-                    dst.write(row, 4, '1')
-                    dst.write(row, 5, effectiveATradeUsersDict[str(khcode).strip()])
-                else:
+                atradeDate = str(accvalquery.checkIfEffectiveATrade(str(khcode).strip())).strip()
+                if atradeDate == 'None':
                     dst.write(row, 4, '0')
                     dst.write(row, 5, '')
+                    ''''
+                    if str(khcode).strip() in effectiveATradeUsersDict:
+                        effectiveatradeFlag = 1
+                        dst.write(row, 4, '1')
+                        atradeDate = effectiveATradeUsersDict[str(khcode).strip()]
+                        dst.write(row, 5, atradeDate)
+                    else:
+                        dst.write(row, 4, '0')
+                        dst.write(row, 5, '')
+                    '''
+                else:
+                    effectiveatradeFlag = 1
+                    dst.write(row, 4, '1')
+                    dst.write(row, 5, atradeDate)
+
 
                 # 有效登录天数 #
-                effectivemonth = cl.getEffectiveLoginMonthByUser(khcode, khusrmobile)
-                if effectivemonth is not None:
-                    effectiveLoginFlag = 1
-                    dst.write(row, 6, '1')
-                    dst.write(row, 7, effectivemonth)
-                else:
+                loginDate = str(accvalquery.checkIfEffectiveLogin(str(khcode).strip())).strip()
+                if loginDate == 'None':
                     dst.write(row, 6, '0')
                     dst.write(row, 7, '')
-
+                    ''''
+                    loginDate = cl.getEffectiveLoginMonthByUser(khcode, khusrmobile)
+                    if loginDate is not None:
+                        effectiveLoginFlag = 1
+                        dst.write(row, 6, '1')
+                        dst.write(row, 7, loginDate)
+                    else:
+                        dst.write(row, 6, '0')
+                        dst.write(row, 7, '')
+                    '''
+                else:
+                    effectiveLoginFlag = 1
+                    dst.write(row, 6, '1')
+                    dst.write(row, 7, loginDate)
 
                 # 有效入金补充 #
-                if str(khcode).strip() in effectiveCapticalUsersDict:
-                    effectiveCapitalFlag = 1
-                    dst.write(row, 8, '1')
-                    dst.write(row, 9, effectiveCapticalUsersDict[str(khcode).strip()])
-                else:
+                capitaldate = str(accvalquery.checkIfEffectiveCapital(str(khcode).strip())).strip()
+                if capitaldate == 'None':
                     dst.write(row, 8, '0')
                     dst.write(row, 9, '')
+                    '''
+                    if str(khcode).strip() in effectiveCapticalUsersDict:
+                        effectiveCapitalFlag = 1
+                        capitaldate = effectiveCapticalUsersDict[str(khcode).strip()]
+                        dst.write(row, 8, '1')
+                        dst.write(row, 9, capitaldate)
+                    else:
+                        dst.write(row, 8, '0')
+                        dst.write(row, 9, '')
+                    '''
+                else:
+                    effectiveCapitalFlag = 1
+                    dst.write(row, 8, '1')
+                    dst.write(row, 9, capitaldate)
 
                 # 有效交易补充 #
-                if str(khcode).strip() in effectiveTradeUsersDict:
-                    effectivetradeFlag = 1
-                    dst.write(row, 10, '1')
-                    dst.write(row, 11, effectiveTradeUsersDict[str(khcode).strip()])
-                else:
+                tradedate = str(accvalquery.checkIfEffectiveTrade(str(khcode).strip())).strip()
+                if tradedate == 'None':
                     dst.write(row, 10, '0')
                     dst.write(row, 11, '')
+                    '''
+                    if str(khcode).strip() in effectiveTradeUsersDict:
+                        effectivetradeFlag = 1
+                        tradedate = effectiveTradeUsersDict[str(khcode).strip()]
+                        dst.write(row, 10, '1')
+                        dst.write(row, 11, tradedate)
+                    else:
+                        dst.write(row, 10, '0')
+                        dst.write(row, 11, '')
+                    '''
+                else:
+                    effectivetradeFlag = 1
+                    dst.write(row, 10, '1')
+                    dst.write(row, 11, tradedate)
 
                 # 用户价值
                 value = 0
@@ -220,25 +262,25 @@ def getACCVALFromSQLite():
                 # 当月红包
                 # 有效跟投 + 50
                 if effectiveatradeFlag == 1:
-                    if effectiveATradeUsersDict[str(khcode).strip()][0:6] == "2019" + str(currentMonth).strip():
+                    if atradeDate[0:6] == "2019" + str(currentMonth).strip():
                         redpocket = redpocket + 50
 
                 # 当月红包
                 # 入金或者交易 + 20
-                if (effectiveCapitalFlag == 1 and effectiveCapticalUsersDict[str(khcode).strip()][0:6] == "2019" + currentMonth and effectivetradeFlag == 0)\
-                        or (effectivetradeFlag == 1 and effectiveTradeUsersDict[str(khcode).strip()][0:6] == '2019' + currentMonth and effectiveCapitalFlag == 0)\
-                        or (effectiveCapitalFlag == 1 and effectivetradeFlag  ==1 and effectiveCapticalUsersDict[str(khcode).strip()][0:6] == "2019" + currentMonth\
-                        and effectiveTradeUsersDict[str(khcode).strip()][0:6] == '2019' + currentMonth):
+                if (effectiveCapitalFlag == 1 and capitaldate[0:6] == "2019" + currentMonth and effectivetradeFlag == 0)\
+                        or (effectivetradeFlag == 1 and tradedate[0:6] == '2019' + currentMonth and effectiveCapitalFlag == 0)\
+                        or (effectiveCapitalFlag == 1 and effectivetradeFlag == 1 and capitaldate[0:6] == "2019" + currentMonth and tradedate[0:6] == '2019' + currentMonth)\
+                    or (effectiveCapitalFlag == 1 and effectivetradeFlag == 1 and capitaldate[0:6] == "2019" + currentMonth  and tradedate[0:6] == '2019' + nextMonth)\
+                    or (effectiveCapitalFlag == 1 and effectivetradeFlag == 1 and capitaldate[0:6] == "2019" + nextMonth  and tradedate[0:6] == '2019' + currentMonth):
                     redpocket = redpocket + 20
 
                 # 当月红包
                 # 有效登录+ 10
                 if effectiveLoginFlag == 1:
-                    if effectivemonth == "2019" + str(currentMonth).strip():
+                    if loginDate == "2019" + str(currentMonth).strip():
                         redpocket = redpocket + 10
 
-
-                dst.write(row, 23, str(redpocket))
+                dst.write(row, 23, int(redpocket))
 
             else:
                 #如果没有离开，找到该用户在sheet2的数据
@@ -263,41 +305,68 @@ def getACCVALFromSQLite():
                     effectiveLoginFlag1 = 0
 
                     # 有效跟投补充 #
-                    if str(khcode1).strip() in effectiveATradeUsersDict:
+                    atradeDate1 = str(accvalquery.checkIfEffectiveATrade(str(khcode1).strip())).strip()
+                    if atradeDate1 == 'None':
+                        if str(khcode1).strip() in effectiveATradeUsersDict:
+                            effectiveatradeFlag1 = 1
+                            dst.write(row, 4, '1')
+                            atradeDate1 = effectiveATradeUsersDict[str(khcode1).strip()]
+                            dst.write(row, 5, atradeDate1)
+                        else:
+                            dst.write(row, 4, '0')
+                            dst.write(row, 5, '')
+                    else:
                         effectiveatradeFlag1 = 1
                         dst.write(row, 4, '1')
-                        dst.write(row, 5, effectiveATradeUsersDict[str(khcode1).strip()])
-                    else:
-                        dst.write(row, 4, '0')
-                        dst.write(row, 5, '')
+                        dst.write(row, 5, atradeDate1)
 
                     # 有效登录天数 #
-                    effectivemonth1 = cl.getEffectiveLoginMonthByUser(khcode1, khusrmobile1)
-                    if effectivemonth1 is not None:
+                    loginDate1 = str(accvalquery.checkIfEffectiveLogin(str(khcode1).strip())).strip()
+                    if loginDate1 == 'None':
+                        loginDate1 = cl.getEffectiveLoginMonthByUser(khcode1, khusrmobile1)
+                        if loginDate1 is not None:
+                            effectiveLoginFlag1 = 1
+                            dst.write(row, 6, '1')
+                            dst.write(row, 7, loginDate1)
+                        else:
+                            dst.write(row, 6, '0')
+                            dst.write(row, 7, '')
+                    else:
                         effectiveLoginFlag1 = 1
                         dst.write(row, 6, '1')
-                        dst.write(row, 7, effectivemonth1)
-                    else:
-                        dst.write(row, 6, '0')
-                        dst.write(row, 7, '')
+                        dst.write(row, 7, loginDate1)
 
                     # 有效入金补充 #
-                    if str(khcode1).strip() in effectiveCapticalUsersDict:
+                    capitaldate1 = str(accvalquery.checkIfEffectiveCapital(str(khcode1).strip())).strip()
+                    if capitaldate1 == 'None':
+                        if str(khcode1).strip() in effectiveCapticalUsersDict:
+                            effectiveCapitalFlag1 = 1
+                            capitaldate1 = effectiveCapticalUsersDict[str(khcode1).strip()]
+                            dst.write(row, 8, '1')
+                            dst.write(row, 9, capitaldate1)
+                        else:
+                            dst.write(row, 8, '0')
+                            dst.write(row, 9, '')
+                    else:
                         effectiveCapitalFlag1 = 1
                         dst.write(row, 8, '1')
-                        dst.write(row, 9, effectiveCapticalUsersDict[str(khcode1).strip()])
-                    else:
-                        dst.write(row, 8, '0')
-                        dst.write(row, 9, '')
+                        dst.write(row, 9, capitaldate1)
 
                     # 有效交易补充 #
-                    if str(khcode1).strip() in effectiveTradeUsersDict:
+                    tradedate1 = str(accvalquery.checkIfEffectiveTrade(str(khcode1).strip())).strip()
+                    if tradedate1 == 'None':
+                        if str(khcode1).strip() in effectiveTradeUsersDict:
+                            effectivetradeFlag1 = 1
+                            tradedate1 = effectiveTradeUsersDict[str(khcode1).strip()]
+                            dst.write(row, 10, '1')
+                            dst.write(row, 11, tradedate1)
+                        else:
+                            dst.write(row, 10, '0')
+                            dst.write(row, 11, '')
+                    else:
                         effectivetradeFlag1 = 1
                         dst.write(row, 10, '1')
-                        dst.write(row, 11, effectiveTradeUsersDict[str(khcode1).strip()])
-                    else:
-                        dst.write(row, 10, '0')
-                        dst.write(row, 11, '')
+                        dst.write(row, 11, tradedate1)
 
                     # 用户价值
                     value1 = 0
@@ -328,53 +397,32 @@ def getACCVALFromSQLite():
                     else:
                         dst.write(row, 22, '0')
 
-                    '''
-                    # 通过sheet6和sheet2的比较来得出离职人员（当期的）
-                    marketperidFromNewAccount1 = None
-                    marketperidFromAccount1 = None
-                    for mpna1 in db.execute('SELECT marketperid FROM newaccount WHERE khcode = ?',
-                                            [khcode1,]):
-                        marketperidFromNewAccount1 = mpna1
-                    for mpa1 in db.execute('SELECT marketperid FROM account WHERE khcode = ?',
-                                           [khcode1,]):
-                        marketperidFromAccount1 = mpa1
-
-                    
-                    if str(marketperidFromAccount1).strip() == str(marketperidFromNewAccount1).strip() or\
-                            (str(marketperidFromAccount1).strip() == '(None,)' and str(marketperidFromNewAccount1).strip() == '(\'None\',)') or\
-                            (str(marketperidFromNewAccount1).strip() == '(None,)' and str(marketperidFromAccount1).strip() == '(\'None\',)'):
-                        dst.write(row, 22, '0')  # W # 离职人员的高亮
-                    else:
-                        print("marketperidFromNewAccount1", marketperidFromNewAccount1)
-                        print("marketperidFromAccount1", marketperidFromAccount1)
-                        dst.write(row, 22, '1')
-                        leftMarketPerByCompare2and6.append(str(marketperidFromAccount1).strip())
-                    '''
                 if len(leftMarketPerByCompare2and6) != 0:
                     updateLeftMarketPer.update(leftMarketPerByCompare2and6)
 
                 # 当月红包
                 # 有效跟投 + 50
                 if effectiveatradeFlag1 == 1:
-                    if effectiveATradeUsersDict[str(khcode1).strip()][0:6] == "2019" + str(currentMonth).strip():
+                    if atradeDate1[0:6] == "2019" + str(currentMonth).strip():
                         redpocket1 = redpocket1 + 50
 
                 # 当月红包
                 # 入金或者交易 + 20
-                if (effectiveCapitalFlag1 == 1 and effectiveCapticalUsersDict[str(khcode1).strip()][0:6] == "2019" + currentMonth and effectivetradeFlag1 == 0)\
-                        or (effectivetradeFlag1 == 1 and effectiveTradeUsersDict[str(khcode1).strip()][0:6] == '2019' + currentMonth and effectiveCapitalFlag1 == 0)\
-                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1  ==1 and effectiveCapticalUsersDict[str(khcode1).strip()][0:6] == "2019" + currentMonth\
-                        and effectiveTradeUsersDict[str(khcode1).strip()][0:6] == '2019' + currentMonth):
+                if (effectiveCapitalFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth and effectivetradeFlag1 == 0)\
+                        or (effectivetradeFlag1 == 1 and tradedate1[0:6] == '2019' + currentMonth and effectiveCapitalFlag1 == 0)\
+                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth\
+                        and tradedate1[0:6] == '2019' + currentMonth)\
+                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth  and tradedate1[0:6] == '2019' + nextMonth)\
+                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + nextMonth  and tradedate1[0:6] == '2019' + currentMonth):
                     redpocket1 = redpocket1 + 20
 
-
                 # 当月红包
-                # 有效登录10
+                # 有效登录+ 10
                 if effectiveLoginFlag1 == 1:
-                    if effectivemonth1 == "2019" + str(currentMonth).strip():
+                    if loginDate1 == "2019" + str(currentMonth).strip():
                         redpocket1 = redpocket1 + 10
 
-                dst.write(row, 23, str(redpocket1))
+                dst.write(row, 23, int(redpocket1))
 
             # iterator
             row = row + 1
@@ -406,44 +454,70 @@ def getACCVALFromSQLite():
                 effectiveLoginFlag2 = 0
 
                 # 有效跟投补充 #
-                if str(khcode2).strip() in effectiveATradeUsersDict:
+                atradeDate2 = str(accvalquery.checkIfEffectiveATrade(str(khcode2).strip())).strip()
+                if atradeDate2 == 'None':
+                    if str(khcode2).strip() in effectiveATradeUsersDict:
+                        effectiveatradeFlag2 = 1
+                        dst.write(row, 4, '1')
+                        atradeDate2 = effectiveATradeUsersDict[str(khcode2).strip()]
+                        dst.write(row, 5, atradeDate2)
+                    else:
+                        dst.write(row, 4, '0')
+                        dst.write(row, 5, '')
+                else:
                     effectiveatradeFlag2 = 1
                     dst.write(row, 4, '1')
-                    dst.write(row, 5, effectiveATradeUsersDict[str(khcode2).strip()])
-                    # 当月红包
-                    if effectiveATradeUsersDict[str(khcode2).strip()][0:6] == "2019" + str(currentMonth).strip():
-                        redpocket2 = redpocket2 + 50
-                else:
-                    dst.write(row, 4, '0')
-                    dst.write(row, 5, '')
+                    dst.write(row, 5, atradeDate2)
+
 
                 # 有效登录天数 #
-                effectivemonth2 = cl.getEffectiveLoginMonthByUser(khcode2, khusrmobile2)
-                if effectivemonth2 is not None:
+                loginDate2 = str(accvalquery.checkIfEffectiveLogin(str(khcode2).strip())).strip()
+                if loginDate2 == 'None':
+                    loginDate2 = cl.getEffectiveLoginMonthByUser(khcode2, khusrmobile2)
+                    if loginDate2 is not None:
+                        effectiveLoginFlag2 = 1
+                        dst.write(row, 6, '1')
+                        dst.write(row, 7, loginDate2)
+                    else:
+                        dst.write(row, 6, '0')
+                        dst.write(row, 7, '')
+                else:
                     effectiveLoginFlag2 = 1
                     dst.write(row, 6, '1')
-                    dst.write(row, 7, effectivemonth2)
-                else:
-                    dst.write(row, 6, '0')
-                    dst.write(row, 7, '')
+                    dst.write(row, 7, loginDate2)
 
                 # 有效入金补充 #
-                if str(khcode2).strip() in effectiveCapticalUsersDict:
+                capitaldate2 = str(accvalquery.checkIfEffectiveCapital(str(khcode2).strip())).strip()
+                if capitaldate2 == 'None':
+                    if str(khcode2).strip() in effectiveCapticalUsersDict:
+                        effectiveCapitalFlag2 = 1
+                        capitaldate2 = effectiveCapticalUsersDict[str(khcode2).strip()]
+                        dst.write(row, 8, '1')
+                        dst.write(row, 9, capitaldate2)
+                    else:
+                        dst.write(row, 8, '0')
+                        dst.write(row, 9, '')
+                else:
                     effectiveCapitalFlag2 = 1
                     dst.write(row, 8, '1')
-                    dst.write(row, 9, effectiveCapticalUsersDict[str(khcode2).strip()])
-                else:
-                    dst.write(row, 8, '0')
-                    dst.write(row, 9, '')
+                    dst.write(row, 9, capitaldate2)
 
                 # 有效交易补充 #
-                if str(khcode2).strip() in effectiveTradeUsersDict:
+                tradedate2 = str(accvalquery.checkIfEffectiveTrade(str(khcode2).strip())).strip()
+                if tradedate2 == 'None':
+                    if str(khcode2).strip() in effectiveTradeUsersDict:
+                        effectivetradeFlag2 = 1
+                        tradedate2 = effectiveTradeUsersDict[str(khcode2).strip()]
+                        dst.write(row, 10, '1')
+                        dst.write(row, 11, tradedate2)
+                    else:
+                        dst.write(row, 10, '0')
+                        dst.write(row, 11, '')
+                else:
                     effectivetradeFlag2 = 1
                     dst.write(row, 10, '1')
-                    dst.write(row, 11, effectiveTradeUsersDict[str(khcode2).strip()])
-                else:
-                    dst.write(row, 10, '0')
-                    dst.write(row, 11, '')
+                    dst.write(row, 11, tradedate2)
+
 
                 # 用户价值
                 value2 = 0
@@ -476,24 +550,27 @@ def getACCVALFromSQLite():
                 # 当月红包
                 # 有效跟投 + 50
                 if effectiveatradeFlag2 == 1:
-                    if effectiveATradeUsersDict[str(khcode2).strip()][0:6] == "2019" + str(currentMonth).strip():
+                    if atradeDate2[0:6] == "2019" + str(currentMonth).strip():
                         redpocket2 = redpocket2 + 50
 
                 # 当月红包
                 # 入金或者交易 + 20
-                if (effectiveCapitalFlag2 == 1 and effectiveCapticalUsersDict[str(khcode2).strip()][0:6] == "2019" + currentMonth and effectivetradeFlag2 == 0)\
-                        or (effectivetradeFlag2 == 1 and effectiveTradeUsersDict[str(khcode2).strip()][0:6] == '2019' + currentMonth and effectiveCapitalFlag2 == 0)\
-                        or (effectiveCapitalFlag2 == 1 and effectivetradeFlag2  ==1 and effectiveCapticalUsersDict[str(khcode2).strip()][0:6] == "2019" + currentMonth\
-                        and effectiveTradeUsersDict[str(khcode2).strip()][0:6] == '2019' + currentMonth):
+                if (effectiveCapitalFlag2 == 1 and capitaldate2[0:6] == "2019" + currentMonth and effectivetradeFlag2 == 0)\
+                        or (effectivetradeFlag2 == 1 and tradedate2[0:6] == '2019' + currentMonth and effectiveCapitalFlag2 == 0)\
+                        or (effectiveCapitalFlag2 == 1 and effectivetradeFlag2 == 1 and capitaldate2[0:6] == "2019" + currentMonth\
+                        and tradedate2[0:6] == '2019' + currentMonth) \
+                        or (effectiveCapitalFlag2 == 1 and effectivetradeFlag2 == 1 and capitaldate2[0:6] == "2019" + currentMonth and tradedate2[0:6] == '2019' + nextMonth) \
+                        or (effectiveCapitalFlag2 == 1 and effectivetradeFlag2 == 1 and capitaldate2[0:6] == "2019" + nextMonth and tradedate2[0:6] == '2019' + currentMonth):
                     redpocket2 = redpocket2 + 20
 
                 # 当月红包
-                # 有效登录10
+                # 有效登录+ 10
                 if effectiveLoginFlag2 == 1:
-                    if effectivemonth2 == "2019" + str(currentMonth).strip():
+                    if loginDate2 == "2019" + str(currentMonth).strip():
                         redpocket2 = redpocket2 + 10
 
-                dst.write(row, 23, str(redpocket2))
+
+                dst.write(row, 23, int(redpocket2))
 
                 # iterator
                 row = row + 1
@@ -505,3 +582,26 @@ def getACCVALFromSQLite():
         return dfreturn
 
 getACCVALFromSQLite()
+
+'''
+# 通过sheet6和sheet2的比较来得出离职人员（当期的）
+marketperidFromNewAccount1 = None
+marketperidFromAccount1 = None
+for mpna1 in db.execute('SELECT marketperid FROM newaccount WHERE khcode = ?',
+                        [khcode1,]):
+    marketperidFromNewAccount1 = mpna1
+for mpa1 in db.execute('SELECT marketperid FROM account WHERE khcode = ?',
+                       [khcode1,]):
+    marketperidFromAccount1 = mpa1
+
+
+if str(marketperidFromAccount1).strip() == str(marketperidFromNewAccount1).strip() or\
+        (str(marketperidFromAccount1).strip() == '(None,)' and str(marketperidFromNewAccount1).strip() == '(\'None\',)') or\
+        (str(marketperidFromNewAccount1).strip() == '(None,)' and str(marketperidFromAccount1).strip() == '(\'None\',)'):
+    dst.write(row, 22, '0')  # W # 离职人员的高亮
+else:
+    print("marketperidFromNewAccount1", marketperidFromNewAccount1)
+    print("marketperidFromAccount1", marketperidFromAccount1)
+    dst.write(row, 22, '1')
+    leftMarketPerByCompare2and6.append(str(marketperidFromAccount1).strip())
+'''

@@ -10,12 +10,16 @@ def importClientLoginFolderToSQLite():
     """excel"""
     with sqlite3.connect('C:\sqlite\db\hxdata.db') as db:
             # ExcelDocument('..\input\营销人员和营业部列表.xlsx') as src: 
-            insert_template = "INSERT INTO clientloginevent " \
+            insert_template1 = "INSERT INTO clientloginevent " \
                     "(clientid, logindate, logintime, eventtype, eventmsg) " \
                     "VALUES (?, ?, ?, ?, ?);"
+            insert_template2 = "INSERT INTO clientloginevent " \
+                    "(clientid, logindate, eventmsg) " \
+                    "VALUES (?, ?, ?);"
 
 
             #清空的数据库遗留的数据（选择）
+            print('delete')
             db.execute('DELETE FROM clientloginevent;')
       
             inputFolder = '..\input\clientLogin\\'
@@ -27,19 +31,30 @@ def importClientLoginFolderToSQLite():
                     print("df Column headings:")
                     print(df.columns)
 
-                    #for sheet in src:
-                    #    if sheet.name == 'SQL Results':
-                    df1 = df[['OperatorID','OperateDate','OperateTime','EventType', 'EventMsg']] #选取你需要的列数
-                    print("df1 Column headings:") 
+
+                    df1 = None
+                    if df.shape[1] == 7:
+                        df1 = df[['OperatorID','OperateDate','OperateTime','EventType', 'EventMsg']] #选取你需要的列数
+                        # 转变operatetime列的类型
+                        df1['OperateTime'] = df1['OperateTime'].astype('str')
+                    else:
+                        if df.shape[1] == 5:
+                            df1 = df[['OperatorID','OperateDate', 'EventMsg']] #选取你需要的列数
+
+                    print("df1 Column headings:")
                     print(df1.columns)
                     print(df1)
 
-                    # 转变operatetime列的类型
-                    df1['OperateTime'] = df1['OperateTime'].astype('str')
 
-                    try: 
-                        print('3')
-                        db.executemany(insert_template, df1.values) #iter_rows() 自动跳过了抬头首行
+                    try:
+                        if df.shape[1] == 7:
+                            print('7')
+                            db.executemany(insert_template1, df1.values) #iter_rows() 自动跳过了抬头首行
+                        else:
+                            if df.shape[1] == 5:
+                                print('5')
+                                db.executemany(insert_template2, df1.values)  # iter_rows() 自动跳过了抬头首行
+
                     except sqlite3.Error as e:
                         print('2')
                         print(e)

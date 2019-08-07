@@ -10,10 +10,12 @@ import pandas as pd
 def importHisClientLoginEventToSQLite():
     with sqlite3.connect('C:\sqlite\db\hxdata.db') as db:
         # ExcelDocument('..\input\营销人员和营业部列表.xlsx') as src:
-        insert_template = "INSERT INTO hisclientloginevent " \
+        insert_template1 = "INSERT INTO hisclientloginevent " \
                           "(clientid, logindate, logintime, eventtype, eventmsg) " \
                           "VALUES (?, ?, ?, ?, ?);"
-
+        insert_template2 = "INSERT INTO hisclientloginevent " \
+                           "(clientid, logindate, eventmsg) " \
+                           "VALUES (?, ?, ?);"
         # 清空的数据库遗留的数据（选择）
         db.execute('DELETE FROM hisclientloginevent;')
 
@@ -38,20 +40,27 @@ def importHisClientLoginEventToSQLite():
 
                     # for sheet in src:
                     #    if sheet.name == 'SQL Results':
-                    df1 = df[['OperatorID', 'OperateDate', 'OperateTime', 'EventType', 'EventMsg']]  # 选取你需要的列数
-                    #print("df1 Column headings:")
-                    #print(df1.columns)
-                    #print(df1)
-
-                    # 转变operatetime列的类型
-                    df1['OperateDate'] = df1['OperateDate'].astype('str')
-                    df1['OperateTime'] = df1['OperateTime'].astype('str')
-                    df1['EventType'] = df1['EventType'].astype('str')
-                    df1['EventMsg'] = df1['EventMsg'].astype('str')
+                    df1 = None
+                    if df.shape[1] == 7:
+                        df1 = df[['OperatorID', 'OperateDate', 'OperateTime', 'EventType', 'EventMsg']]  # 选取你需要的列数
+                        # 转变operatetime列的类型
+                        df1['OperateDate'] = df1['OperateDate'].astype('str')
+                        df1['OperateTime'] = df1['OperateTime'].astype('str')
+                        df1['EventType'] = df1['EventType'].astype('str')
+                        df1['EventMsg'] = df1['EventMsg'].astype('str')
+                    else:
+                        if df.shape[1] == 5:
+                            df1 = df[['OperatorID', 'OperateDate', 'EventMsg']]  # 选取你需要的列数
 
                     try:
                         #print('3')
-                        db.executemany(insert_template, df1.values)  # iter_rows() 自动跳过了抬头首行
+                        if df.shape[1] == 7:
+                            print('7')
+                            db.executemany(insert_template1, df1.values)  # iter_rows() 自动跳过了抬头首行
+                        else:
+                            if df.shape[1] == 5:
+                                print('5')
+                                db.executemany(insert_template2, df1.values)  # iter_rows() 自动跳过了抬头首行
                         totalNumberOfFiles = totalNumberOfFiles + 1
                     except sqlite3.Error as e:
                         print('2')

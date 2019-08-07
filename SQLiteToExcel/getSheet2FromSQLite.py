@@ -111,7 +111,7 @@ class getSheet2FromSQLite:
                 # 补充用户月登陆天数所需的dictionary
                 # 年份：09|| 2009
                 # 月份  2 || 12
-                loginDaysDict = clientLoginEventUtility().getClientLoginDaysInYearMonth(19, 7)
+                loginDaysDict = clientLoginEventUtility().getClientLoginDaysInYearMonth(19, 8)
             
                 # src 为比较范本
                 """

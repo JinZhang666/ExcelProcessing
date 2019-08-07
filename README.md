@@ -374,7 +374,10 @@ Notice：该项目是由python写成的excel数据处理工具，同时引入sql
   * 生成ACC + VAL，输出新开户用户转化
   1. prerequiste: sheet2 
   2. newACC + clientlogin + capital + aTtrade + ACCVALPrevious.xlsx/ACC+VAL      
-  3. 跑完以后对比ACCPrevious里的注销人员 & ACCVAL中的注销人员, 理论上应该相同，因为注销人员的信息已经不会改变了。
+  3. 跑完以后找出ACCVAL中的注销人员, 这些注销人员应当能在上一次跑出来的ACCVALPrevious里还有记录。
+   对比后，如果登录/入金/跟投/交易少了，可能是因为为注销人员的记录在数据库里删除了,还是保留ACCVALPrevious的值。
+   如果登录/入金/跟投/交易的记录多了，可能是销户的那个星期，也就是用户还存在的最后一个星期还进行了某些行为，
+   而且虽然销户了但是记录还没来得及删除，保留新的ACCVAL跑出来的结果。
 ----
 ## 业务逻辑指南
 * [营销关系补充](./notes/营销关系补充.md) 

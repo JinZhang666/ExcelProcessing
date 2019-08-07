@@ -58,9 +58,10 @@ def importNewregToSQLite():
                 db.commit() 
 
             #检查是不是所有的数据都被加载了
-            select_stmt = 'SELECT DISTINCT usrmobile FROM newreg;'
+            select_stmt = 'SELECT usrmobile FROM newreg;'
+            total = 0
             for row in db.execute(select_stmt).fetchall():
-                print('newReg: 1')
                 print(str(row))
-
+                total = total + 1
+            print(total)
 importNewregToSQLite()

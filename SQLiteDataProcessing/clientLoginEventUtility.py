@@ -16,6 +16,7 @@ class clientLoginEventUtility:
         self.dict5 = self.getClientLoginDaysInYearMonth(19, 5)
         self.dict6 = self.getClientLoginDaysInYearMonth(19, 6)
         self.dict7 = self.getClientLoginDaysInYearMonth(19, 7)
+        self.dict8 = self.getClientLoginDaysInYearMonth(19, 8)
 
     # 字典，记录每个用户总共登录得天数
     def getTotalLogginDays(self):
@@ -108,7 +109,7 @@ class clientLoginEventUtility:
         if count >= 5:
             return '201905'
 
-        # 6月 - 7月
+        # 6月 - 8月
         if khcode in self.dict6:
             count = count + self.dict6[khcode]
         if count >= 5:
@@ -118,6 +119,11 @@ class clientLoginEventUtility:
             count = count + self.dict7[khcode]
         if count >= 5:
             return '201907'
+
+        if khcode in self.dict8:
+            count = count + self.dict8[khcode]
+        if count >= 5:
+            return '201908'
 
         return None
 

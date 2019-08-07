@@ -40,6 +40,7 @@ class getWechatReferrer:
         self.activityDic = self.getActivityReferrer(df2)
         self.totalDic = self.mergeDic(self.f2fDic, self.posterDic, self.activityDic)
         self.totalExpandedDic = self.getExpandedWechatReferrer(self.totalDic)
+
         '''
         for phone in self.totalExpandedDic:
             print(phone, self.totalExpandedDic[phone])
@@ -75,6 +76,7 @@ class getWechatReferrer:
                 dic = {}
                 dic['REFERRER_ID'] = dic1[user_phone][2]
                 dic['海报id'] = dic1[user_phone][3]
+                dic['推荐渠道'] = 'f2f'
                 mergedDic[user_phone] = dic
 
         for user_phone in dic2:
@@ -84,6 +86,7 @@ class getWechatReferrer:
                 dic = {}
                 dic['REFERRER_ID'] = dic2[user_phone][2]
                 dic['海报id'] = dic2[user_phone][3]
+                dic['推荐渠道'] = 'poster'
                 mergedDic[user_phone] = dic
 
         for user_phone in dic3:
@@ -93,6 +96,7 @@ class getWechatReferrer:
                 dic = {}
                 dic['REFERRER_ID'] = dic3[user_phone][2]
                 dic['海报id'] = dic3[user_phone][3]
+                dic['推荐渠道'] = 'activity'
                 mergedDic[user_phone] = dic
 
         return mergedDic
@@ -119,6 +123,7 @@ class getWechatReferrer:
 
                 if len(resEarliest) > 0:
                     f2fDic[value['开户手机号']] = resEarliest[0]
+
 
         return f2fDic
         # print(f2fDic)
