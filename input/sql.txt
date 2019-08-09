@@ -1,0 +1,33 @@
+load data infile 'D:\DataTool\input\newReg.csv' 
+into table sw_reg_user 
+fields terminated by ',' 
+optionally enclosed by '"' 
+escaped by '"' 
+lines terminated by '\n';
+
+
+CREATE TABLE `world`.`sw_reg_user` (
+    `MOBILENO` varchar(20) DEFAULT NULL,
+    `MARKET_CODE` varchar(20) DEFAULT NULL,
+    `DEPARTMENT_ID` varchar(255) DEFAULT NULL,
+    `CREATETIME` timestamp NULL DEFAULT NULL
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COMMENT = 'Reg user with sales';
+
+CREATE TABLE `world`.`sw_sim_trade_days` (
+
+    `MOBILENO` varchar(20) DEFAULT NULL,
+
+    `CREATETIME` timestamp NULL DEFAULT NULL,
+
+    `MONTH` varchar(10) DEFAULT NULL,
+
+    `TRADEDAYS` INT(6) DEFAULT NULL
+
+)
+
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COMMENT = 'the days of sim trade every month';
