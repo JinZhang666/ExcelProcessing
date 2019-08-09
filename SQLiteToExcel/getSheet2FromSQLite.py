@@ -129,7 +129,7 @@ class getSheet2FromSQLite:
                         newaccount.marketperid, newaccount.qdbm, newaccount.tjrsj, newaccount.marketdepid,\
                         newaccount.marketpername, newaccount.marketpertype, newaccount.marketpermobile, newaccount.marketdepname \
                         FROM newaccount\
-                        WHERE newaccount.tjrsj IS NOT NULL;'
+                            WHERE newaccount.tjrsj IS NOT NULL;'
 
                 #抬头补充
                 dst.write(0, 0, '开户时间')  #A
