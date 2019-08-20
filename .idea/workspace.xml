@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d442a44-6159-4fcc-9365-77cdc1d83abb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SQLiteQuery/capitalQuery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/accountCapital.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" beforeDir="false" afterPath="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,8 +130,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="480">
-                <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
+              <first_editor relative-caret-position="551">
+                <caret line="400" selection-start-line="400" selection-end-line="400" />
               </first_editor>
               <second_editor />
             </state>
@@ -287,16 +261,6 @@
               <item name="ExcelProcessingTool" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExcelProcessingTool" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ExcelProcessingTool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExcelProcessingTool" type="462c0819:PsiDirectoryNode" />
-              <item name="ExcelToSQLite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExcelProcessingTool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExcelProcessingTool" type="462c0819:PsiDirectoryNode" />
-              <item name="SQLiteToExcel" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -328,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AddSheet6WechatReferrer">
+  <component name="RunManager" selected="Python.getSheet3FromSQLite">
     <configuration name="AddSheet6WechatReferrer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExcelProcessingTool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -436,10 +400,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getSheet3FromSQLite" />
         <item itemvalue="Python.AddSheet6WechatReferrer" />
         <item itemvalue="Python.getSheet6FromSQLite" />
         <item itemvalue="Python.getSheet2FromSQLite" />
-        <item itemvalue="Python.getSheet3FromSQLite" />
         <item itemvalue="Python.playground3" />
       </list>
     </recent_temporary>
@@ -461,7 +425,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8660377" visible="true" weight="0.13011889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8660377" visible="true" weight="0.3712021" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.13396226" side_tool="true" weight="0.25759578" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -920,8 +884,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="480">
-            <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
+          <first_editor relative-caret-position="551">
+            <caret line="400" selection-start-line="400" selection-end-line="400" />
           </first_editor>
           <second_editor />
         </state>

@@ -393,6 +393,12 @@
     7. Capital表格检查更新 + ACC+VAL里有效入金抽查（用户总资产达到1000的那一天）
     8. ATrade表格检查更新 + ACC+VAL里有效跟投抽查（用户首次跟投的那一天）
 
+## 如何push 
+1. git add. 
+2. git rm --cached -r CompareTool hisOutput output dataTool.xls input input_template venv hisInput
+3. git commit - m ""
+4. git push -u origin master 
+
 ## 业务逻辑指南
 * [营销关系补充](./notes/营销关系补充.md) 
 
