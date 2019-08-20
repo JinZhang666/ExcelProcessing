@@ -4,10 +4,15 @@
 import sqlite3  
 import csv 
 import xlrd  
-import xlwt 
+import xlwt
+from ExcelToSQLite.importNewregToSQLite import *
+from ExcelToSQLite.importSimTradeToSQLite import *
+
+def preareSheet3():
+    importNewregToSQLite()
+    importSimTradeToSQLite()
 
 def getSheet3FromSQLite():
-
     # 打开数据库连接以及需要使用的表格文档
     # open('sheet3_baseline.csv', 'rt',
     #        encoding='utf-8', newline='') as src, 
@@ -96,38 +101,5 @@ def getSheet3FromSQLite():
 
             workbookdes.save('../output/sheet3.xls') 
 
-            # csv.writer(dst).writerows(db.execute(sqStatement))
-            
-            # 比较基础文件和输出文件
-            """ 
-            dst.seek(0) 
-            for line1, line2 in zip(range(src.nrows), dst):
-                assert str(line1).rstrip() == str(line2).rstrip() 
-            """
-
-
-            """
-            for usrmobile, marketcode, departmentid, createtime in db.execute(
-                'SELECT usrmobile, marketcode, departmentid, createtime FROM newreg;'):
-                print('%s %s %s %s' % (usrmobile, marketcode, departmentid, createtime))
-            """
-
-            """ 
-            i = 0
-            for usrmobile, tradedays in db.execute(
-                'SELECT simtrade.usrmobile, simtrade.tradedays FROM simtrade INNER JOIN newreg ON simtrade.usrmobile = newreg.usrmobile;'): 
-                print('%s %s' % (usrmobile, tradedays))
-                i = i + 1
-
-            print('%d' % (i))
-            """
-            
-            """
-            i = 0
-            for createtime, usrmobile, tradedays, departmentid, departmentname, marketcode, marketname, markettype, marketmobile in db.execute(
-                sqStatement): 
-                print('%s %s %s %s %s %s %s %s %s' %(createtime, usrmobile, tradedays, departmentid, departmentname, marketcode, marketname, markettype, marketmobile))
-                i = i + 1
-            print('%d' % (i)) 
-            """
+preareSheet3()
 getSheet3FromSQLite()

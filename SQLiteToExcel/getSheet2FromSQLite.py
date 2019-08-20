@@ -10,6 +10,9 @@ from SQLiteDataProcessing.clientLoginEventUtility import *
 from ExcelToSQLite.importNewAccountToSQLite import *
 from UpdateSQliteTables.updateNewAccount import *
 from UpdateSQliteTables.updateLeftMarketPer import *
+from ExcelToSQLite.importClientLoginFolderToSQLite import *
+from ExcelToSQLite.importHisclientLoginEventToSQLite import *
+
 
 '''
 1. import newacc 
@@ -29,6 +32,16 @@ class getSheet2FromSQLite:
         print('Preparing to import clean newaccount')
         importNewAccountToSQLite()
         print('Finsh import clean newaccount')
+
+        # import client login
+        print('Preparing to import this month client login')
+        importClientLoginFolderToSQLite()
+        print('Finsh import this month client login')
+
+        # import history client login
+        print('Preparing to import history client login')
+        importHisClientLoginEventToSQLite()
+        print('Finsh import history client login')
 
         # checkMarketRelation 函数检查营销人员编号是不是填写，如果没有填写，用以下方法找【离职人员的营销关系】：
         # 1. 查看QDBM字段
@@ -127,7 +140,8 @@ class getSheet2FromSQLite:
                 sqStatement =  'SELECT newaccount.khdate, newaccount.khcode, newaccount.usrnameshort, newaccount.usrname,\
                         newaccount.khusrmobile, newaccount.lddepid, newaccount.lddepname,\
                         newaccount.marketperid, newaccount.qdbm, newaccount.tjrsj, newaccount.marketdepid,\
-                        newaccount.marketpername, newaccount.marketpertype, newaccount.marketpermobile, newaccount.marketdepname \
+                        newaccount.marketpername, newaccount.marketpertype, newaccount.marketpermobile, newaccount.marketdepname,\
+                        newaccount.isLeftMarketPer\
                         FROM newaccount\
                             WHERE newaccount.tjrsj IS NOT NULL;'
 
@@ -152,7 +166,7 @@ class getSheet2FromSQLite:
                 for khdate, khcode, usrnameshort, usrname,\
                         khusrmobile, lddepid, lddepname,\
                         marketperid, qdbm, tjrsj, marketdepid,\
-                        marketpername, marketpertype, marketpermobile, marketdepname\
+                        marketpername, marketpertype, marketpermobile, marketdepname, isLeftMarketPer\
                         in db.execute(sqStatement):
                 
                     # CheckMarketRelation()
@@ -168,13 +182,15 @@ class getSheet2FromSQLite:
                         if (str(checkedMarketPerId).strip() != '395000010066' ) and (str(checkedMarketPerId).strip() != '395000010065') and (str(checkedMarketPerId).strip() != '398000010900'):
                             self.internetReferUsers.append(str(khcode).strip())
                     '''
-
+                    ''''
                     if (str(checkedMarketDepId).strip() == 'None') or (str(checkedMarketDepId).strip() == '') :
                         print('row: ' + str(row) + str(khusrmobile) + 'can not find market person and dep')
                     else:
                         for name in db.execute('SELECT marketdep.depname FROM marketdep WHERE marketdep.depid =?', (str(checkedMarketDepId),)):
                             checkedMarketDepName = name[0]
                  
+                    '''
+
                     dst.write(row, 0, str(khdate))
                     dst.write(row, 1, str(khcode))
                     dst.write(row, 2, str(usrnameshort))
@@ -188,7 +204,7 @@ class getSheet2FromSQLite:
 
                     dst.write(row, 6, str(lddepid))
                     dst.write(row, 7, str(lddepname))
-                
+                    '''
                     if str(khcode).strip() != '395000010066' and str(khcode).strip() != '395000010065' and str(khcode).strip() != '398000010900':
                         dst.write(row, 8, str(checkedMarketPerId))
                         dst.write(row, 9, str(marketpername))
@@ -231,6 +247,51 @@ class getSheet2FromSQLite:
                             dst.write(row, 13,"3780 呼和浩特中山西路证券营业部")
                     
                     row = row + 1
+                    '''
+                    if str(khcode).strip() != '395000010066' and str(khcode).strip() != '395000010065' and str(
+                            khcode).strip() != '398000010900':
+                        dst.write(row, 8, str(marketperid))
+                        dst.write(row, 9, str(marketpername))
+                        dst.write(row, 10, str(marketpertype))
+                        dst.write(row, 11, str(marketpermobile))
+                        dst.write(row, 12, str(marketdepid))
+                        dst.write(row, 13, str(marketdepname))
+
+                        # leavedMarketPeriOriginalId 要不就是8位要不就是None
+                        if isLeftMarketPer == '1.0' or isLeftMarketPer == '2.0':
+                            # 说明这个营销人员已经离职了
+                            dst.write(row, 14, '离职' + str(marketperid))
+                            self.leftMarketPerIds.append(str(marketperid))
+                        else:
+                            # None
+                            dst.write(row, 14, '')
+
+                    else:
+                        if str(khcode).strip() == '395000010066':
+                            dst.write(row, 8, "39708036")
+                            dst.write(row, 9, "陈凌")
+                            dst.write(row, 10, "经纪人")
+                            dst.write(row, 11, "15659100118")
+                            dst.write(row, 12, "3970")
+                            dst.write(row, 13, "3970 南平解放路证券营业部")
+
+                        if str(khcode).strip() == '395000010065':
+                            dst.write(row, 8, "31901042")
+                            dst.write(row, 9, "李靖")
+                            dst.write(row, 10, "财富管理师")
+                            dst.write(row, 11, "13072940875")
+                            dst.write(row, 12, "3190")
+                            dst.write(row, 13, "3190 西安分公司")
+
+                        if str(khcode).strip() == '398000010900':
+                            dst.write(row, 8, "37809097")
+                            dst.write(row, 9, "张多佳")
+                            dst.write(row, 10, "财富管理师")
+                            dst.write(row, 11, "18247130746")
+                            dst.write(row, 12, "3780")
+                            dst.write(row, 13, "3780 呼和浩特中山西路证券营业部")
+
+                    row = row + 1
 
                 workbookdes.save('../output/sheet2.xls')
 
@@ -262,14 +323,8 @@ class getSheet2FromSQLite:
         return self.internetReferUsers
 
 # generate sheet2 excel
-sheet2 = getSheet2FromSQLite()
-result = sheet2.getInternetReferUsers()
-print(len(result))
-count = 0
-for user in result:
-    print(count)
-    print(user)
-    count = count + 1
+#sheet2 = getSheet2FromSQLite()
+#sheet2.generateSheet2ExcelFromSQLite()
 
 
 #print(len(sheet2.getInternetReferUsers()))

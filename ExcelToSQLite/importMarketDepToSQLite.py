@@ -34,4 +34,4 @@ def importMarketDepToSQLite():
                 print('1')
                 print(';'.join(str(row)))
 
-importMarketDepToSQLite()
+#importMarketDepToSQLite()

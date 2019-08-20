@@ -64,4 +64,5 @@ def importNewregToSQLite():
                 print(str(row))
                 total = total + 1
             print(total)
-importNewregToSQLite()
+
+#importNewregToSQLite()

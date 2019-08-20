@@ -11,8 +11,8 @@ def importNewAccountToSQLite():
             # ExcelDocument('..\input\营销人员和营业部列表.xlsx') as src: 
             insert_template = "INSERT INTO newaccount " \
                     "(khcode, khdate, usrnameshort, usrname, khusrmobile, lddepid,\
-                    lddepname, marketperid, marketpername, marketpertype, marketpermobile, marketdepname, marketdepid, hrid, tjrsj, qdbm ) " \
-                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+                    lddepname, marketperid, marketpername, marketpertype, marketpermobile, marketdepname, marketdepid, hrid, tjrsj, qdbm, isLeftMarketPer ) " \
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
 
 
             #清空的数据库遗留的数据（选择）
@@ -26,7 +26,7 @@ def importNewAccountToSQLite():
             #for sheet in src:
             #    if sheet.name == 'SQL Results':
             df1 = df[['KHH', 'KHRQ', 'KHJC', 'KHMC', 'SJ', 'YYB', '开户营业部', '人员编号', '人员姓名', '人员类别', '手机', '营业部名称',\
-                    '营业部编号', 'HR编号', 'TJRSJ', 'QDBM'    
+                    '营业部编号', 'HR编号', 'TJRSJ', 'QDBM', '账户状态'
                     ]] #选取你需要的列数
             #print("df1 Column headings:")
             #print(df1.columns)
@@ -53,4 +53,4 @@ def importNewAccountToSQLite():
                 #print("event number:", row)
                 print("inserted开户交易编号", row) 
             """
-importNewAccountToSQLite() 
+#importNewAccountToSQLite()

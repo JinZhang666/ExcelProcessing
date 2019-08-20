@@ -54,4 +54,4 @@ def importCapitalToSQLite():
             row = row + 1
         print("row number: ", row)
 
-importCapitalToSQLite()
+#importCapitalToSQLite()

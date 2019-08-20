@@ -75,6 +75,7 @@ def getACCVALFromSQLite():
         leftMarketPers = getAllLeftMarketPerIDs()
         print('leftMarketPers', leftMarketPers)
 
+
         una = newAccountQuery()
         leftMarketPersUsers = una.getAllLeftMarketPersUsers()
         print("leftMarketPersUsers", leftMarketPersUsers)
@@ -116,8 +117,8 @@ def getACCVALFromSQLite():
 
         select_account_template = 'SELECT * FROM account'
         select_newaccount_template = 'SELECT * FROM newaccount WHERE khcode = ?'
-        currentMonth: str = '07'
-        nextMonth: str = '08'
+        currentMonth: str = '08'
+        nextMonth: str = '09'
 
         '''
         遍历整个account
@@ -252,12 +253,17 @@ def getACCVALFromSQLite():
                 dst.write(row, 20, str(marketdepname))  #U
                 dst.write(row, 21, '1' ) #V #销户用户的高亮
 
+
                 # 注销用户的离职人员没有办法判断，因为他们不存在于sheet2所以没法比较得出离职人员
                 if str(marketperid).strip() in leftMarketPers:
                     # 如果用户对应的营销人员是已离职的营销人员
                     dst.write(row, 22, '1')  #W # 离职人员的高亮
                 else:
                     dst.write(row, 22, '0')
+
+                ''''
+                dst.write(row, 22, str(isLeftMarketPer))
+                '''
 
                 # 当月红包
                 # 有效跟投 + 50
@@ -388,41 +394,43 @@ def getACCVALFromSQLite():
                     dst.write(row, 19, str(marketdepid1))  # T
                     dst.write(row, 20, str(marketdepname1))  # U
                     dst.write(row, 21, '0')  # V #销户用户的高亮
+                    '''
+                        # print("marketperid", marketperid2)
+                        # 因为sheet6里的数据也是以前sheet2覆盖而来，所以如果离职，并不能通过该行数据找到那个离职的人的号码
+                        # 如果newacccount表里的'isLeftMarketPer'字段不为空，填1
+                        if '(' + str(khcode1).strip() + ',)' in leftMarketPersUsers:
+                            dst.write(row, 22, '1')
+                        else:
+                            dst.write(row, 22, '0')
 
-                    # print("marketperid", marketperid2)
-                    # 因为sheet6里的数据也是以前sheet2覆盖而来，所以如果离职，并不能通过该行数据找到那个离职的人的号码
-                    # 如果newacccount表里的'isLeftMarketPer'字段不为空，填1
-                    if '(' + str(khcode1).strip() + ',)' in leftMarketPersUsers:
-                        dst.write(row, 22, '1')
-                    else:
-                        dst.write(row, 22, '0')
+                    if len(leftMarketPerByCompare2and6) != 0:
+                        updateLeftMarketPer.update(leftMarketPerByCompare2and6)
+                    '''
+                    dst.write(row, 22, str(isLeftMarketPer1))
 
-                if len(leftMarketPerByCompare2and6) != 0:
-                    updateLeftMarketPer.update(leftMarketPerByCompare2and6)
+                    # 当月红包
+                    # 有效跟投 + 50
+                    if effectiveatradeFlag1 == 1:
+                        if atradeDate1[0:6] == "2019" + str(currentMonth).strip():
+                            redpocket1 = redpocket1 + 50
 
-                # 当月红包
-                # 有效跟投 + 50
-                if effectiveatradeFlag1 == 1:
-                    if atradeDate1[0:6] == "2019" + str(currentMonth).strip():
-                        redpocket1 = redpocket1 + 50
+                    # 当月红包
+                    # 入金或者交易 + 20
+                    if (effectiveCapitalFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth and effectivetradeFlag1 == 0)\
+                            or (effectivetradeFlag1 == 1 and tradedate1[0:6] == '2019' + currentMonth and effectiveCapitalFlag1 == 0)\
+                            or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth\
+                            and tradedate1[0:6] == '2019' + currentMonth)\
+                            or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth  and tradedate1[0:6] == '2019' + nextMonth)\
+                            or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + nextMonth  and tradedate1[0:6] == '2019' + currentMonth):
+                        redpocket1 = redpocket1 + 20
 
-                # 当月红包
-                # 入金或者交易 + 20
-                if (effectiveCapitalFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth and effectivetradeFlag1 == 0)\
-                        or (effectivetradeFlag1 == 1 and tradedate1[0:6] == '2019' + currentMonth and effectiveCapitalFlag1 == 0)\
-                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth\
-                        and tradedate1[0:6] == '2019' + currentMonth)\
-                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + currentMonth  and tradedate1[0:6] == '2019' + nextMonth)\
-                        or (effectiveCapitalFlag1 == 1 and effectivetradeFlag1 == 1 and capitaldate1[0:6] == "2019" + nextMonth  and tradedate1[0:6] == '2019' + currentMonth):
-                    redpocket1 = redpocket1 + 20
+                    # 当月红包
+                    # 有效登录+ 10
+                    if effectiveLoginFlag1 == 1:
+                        if loginDate1 == "2019" + str(currentMonth).strip():
+                            redpocket1 = redpocket1 + 10
 
-                # 当月红包
-                # 有效登录+ 10
-                if effectiveLoginFlag1 == 1:
-                    if loginDate1 == "2019" + str(currentMonth).strip():
-                        redpocket1 = redpocket1 + 10
-
-                dst.write(row, 23, int(redpocket1))
+                    dst.write(row, 23, int(redpocket1))
 
             # iterator
             row = row + 1
@@ -541,11 +549,14 @@ def getACCVALFromSQLite():
                 dst.write(row, 20, str(marketdepname2))  # U
                 dst.write(row, 21, '0')  # V #销户用户的高亮
 
+                '''
                 # 如果newacccount表里的'isLeftMarketPer'字段不为空，填1
                 if '(' + str(khcode1).strip() + ',)' in leftMarketPersUsers:
                     dst.write(row, 22, '1')
                 else:
                     dst.write(row, 22, '0')
+                '''
+                dst.write(row, 22, str(isLeftMarketPer2))
 
                 # 当月红包
                 # 有效跟投 + 50

@@ -76,4 +76,4 @@ def importAccValToSQLite():
         print("row number: ", row)
 
 
-importAccValToSQLite()
+#importAccValToSQLite()

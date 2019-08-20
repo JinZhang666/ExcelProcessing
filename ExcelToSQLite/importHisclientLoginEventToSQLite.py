@@ -79,4 +79,4 @@ def importHisClientLoginEventToSQLite():
             #print("event number:", row)
 
 
-importHisClientLoginEventToSQLite()
+#importHisClientLoginEventToSQLite()

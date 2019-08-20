@@ -43,4 +43,4 @@ def importMarketPerToSQLite():
                 print('marketPerson: 1')
                 print(';'.join(str(row)))
 
-importMarketPerToSQLite()
+#importMarketPerToSQLite()

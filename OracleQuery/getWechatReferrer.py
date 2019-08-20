@@ -52,7 +52,7 @@ class getWechatReferrer:
 
     def getExpandedWechatReferrer(self, totalDic):
         print('getting expandedWechatReferrer')
-        with cx_Oracle.connect('APPUSER/APPUSER@10.189.66.69:1521/orcl') as db:
+        with cx_Oracle.connect('APPUSER/APPUSER@10.189.65.81:1521/orcl') as db:
             cur = db.cursor()
             for user_phone in totalDic:
                 cur.execute(
@@ -104,7 +104,8 @@ class getWechatReferrer:
     def getf2fReferrer(self, df1):
         print("getting f2f referrer...")
         f2fDic = {}
-        with cx_Oracle.connect('APPUSER/APPUSER@10.189.66.69:1521/orcl') as db:
+        with cx_Oracle.connect('APPUSER/APPUSER@10.189.65.81:1521/orcl') as db:
+            print('The ip is :' + '10.189.65.81')
             df3 = df1[['营销人编码', '开户手机号']]
             cur = db.cursor()
             for key, value in df3.iterrows():
@@ -132,7 +133,7 @@ class getWechatReferrer:
     def getPosterReferrer(self, df2):
         print("getting poster referrer...")
         activityDic = {}
-        with cx_Oracle.connect('APPUSER/APPUSER@10.189.66.69:1521/orcl') as db:
+        with cx_Oracle.connect('APPUSER/APPUSER@10.189.65.81:1521/orcl') as db:
             df5 = df2[['营销人编码', '开户手机号']]
             cur = db.cursor()
             for key, value in df5.iterrows():
@@ -155,7 +156,7 @@ class getWechatReferrer:
     def getActivityReferrer(self, df2):
         print("getting activity referrer...")
         posterDic = {}
-        with cx_Oracle.connect('APPUSER/APPUSER@10.189.66.69:1521/orcl') as db:
+        with cx_Oracle.connect('APPUSER/APPUSER@10.189.65.81:1521/orcl') as db:
             df4 = df2[['营销人编码', '开户手机号']]
             cur = db.cursor()
             for key, value in df4.iterrows():

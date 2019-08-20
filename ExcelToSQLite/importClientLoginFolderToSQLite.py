@@ -3,8 +3,7 @@
 
 import sqlite3 
 import pandas as pd
-import os 
-from exceldoc import * 
+import os
 
 def importClientLoginFolderToSQLite():
     """excel"""
@@ -68,4 +67,4 @@ def importClientLoginFolderToSQLite():
                         print("importing...", file_) 
                         print("event number:", row)
 
-importClientLoginFolderToSQLite()
+#importClientLoginFolderToSQLite()

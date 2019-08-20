@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d442a44-6159-4fcc-9365-77cdc1d83abb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SQLiteQuery/capitalQuery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/accountCapital.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLiteToExcel/playground4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" beforeDir="false" afterPath="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/ACC+VAL+WECHATExpanded.xls" beforeDir="false" afterPath="$PROJECT_DIR$/output/ACC+VAL+WECHATExpanded.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,10 +47,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2337">
-              <caret line="131" column="64" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="64" />
+            <state relative-caret-position="6004">
+              <caret line="326" column="1" selection-start-line="326" selection-start-column="1" selection-end-line="326" selection-end-column="1" />
               <folding>
                 <element signature="e#43#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+              <folding>
+                <element signature="e#43#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding>
+                <element signature="e#43#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1444">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#43#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5529">
-              <caret line="312" column="88" selection-start-line="312" selection-start-column="88" selection-end-line="312" selection-end-column="88" />
+            <state relative-caret-position="2926">
+              <caret line="175" column="95" selection-start-line="175" selection-start-column="12" selection-end-line="175" selection-end-column="95" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -45,10 +105,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6ExpandedWechatReferrer.py">
+        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="1862">
+              <caret line="103" column="14" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
               <folding>
                 <element signature="e#43#57#0" expanded="true" />
               </folding>
@@ -57,27 +117,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="7049">
-                <caret line="371" column="25" selection-start-line="371" selection-start-column="25" selection-end-line="371" selection-end-column="25" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding>
+                <element signature="e#43#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1406">
+              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+              <folding>
+                <element signature="e#43#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OracleQuery/getWechatReferrer.py">
+        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+            <state relative-caret-position="361">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#43#57#0" expanded="true" />
               </folding>
@@ -86,57 +153,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayInCapitalUtility.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="96" selection-end-column="25" />
-              <folding>
-                <element signature="e#43#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/clientLoginEventUtility.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2432">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLiteQuery/accValQuery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="480">
+                <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>18065051780</find>
-      <find>from</find>
-      <find>ACC</find>
-      <find>leftmarket</find>
-      <find>离职</find>
-      <find>319000010261</find>
       <find>13564596745</find>
       <find>atradetimes</find>
       <find>timesdicall</find>
@@ -147,7 +185,6 @@
       <find>398000010900</find>
       <find>红包</find>
       <find>currentMonth</find>
-      <find>跟投</find>
       <find>uservaluedict</find>
       <find>hahaha</find>
       <find>effectivetradeuserdict</find>
@@ -161,6 +198,13 @@
       <find>leftaccount</find>
       <find>currentmon</find>
       <find>currentmonth</find>
+      <find>跟投</find>
+      <find>geteffectiveat</find>
+      <find>EFFECTIVEATRADE</find>
+      <find>effectiveatradeFlag1</find>
+      <find>leftmarketperids</find>
+      <find>appuser</find>
+      <find>internetre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,29 +213,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ExcelToSQLite/import模板.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importhisclientLoginEventToSQLite.py" />
-        <option value="$PROJECT_DIR$/SQLiteQuery/leftMarketPerQuery.py" />
-        <option value="$PROJECT_DIR$/SQLiteQuery/newregQuery.py" />
-        <option value="$PROJECT_DIR$/UpdateSQliteTables/updateLeftMarketPer.py" />
-        <option value="$PROJECT_DIR$/SQLiteDataProcessing/userDayInCapitalUtility.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" />
         <option value="$PROJECT_DIR$/UpdateSQliteTables/updateHisClientLoginEvent.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py" />
         <option value="$PROJECT_DIR$/UpdateSQliteTables/updateLeftAccount.py" />
         <option value="$PROJECT_DIR$/UpdateSQliteTables/updateAccount.py" />
         <option value="$PROJECT_DIR$/SQLiteDataProcessing/clientTradeEventUtility.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/tes.py" />
         <option value="$PROJECT_DIR$/OracleQuery/getWechatRefferer.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py" />
         <option value="$PROJECT_DIR$/UpdateSQliteTables/updateNewAccount.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/getExpandedSheet3FromSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteQuery/inertialTestersQuery.py" />
         <option value="$PROJECT_DIR$/SQLiteQuery/newAccountQuery.py" />
@@ -200,32 +229,49 @@
         <option value="$PROJECT_DIR$/SQLiteToExcel/getaTradeSheetFromSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteQuery/simTradeQuery.py" />
         <option value="$PROJECT_DIR$/SQLiteQuery/kcbActQuery.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/getSimTradeSheetFromSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/source.txt" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/source2.txt" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/playground.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/playground2.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" />
-        <option value="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" />
         <option value="$PROJECT_DIR$/SQLiteQuery/accValQuery.py" />
         <option value="$PROJECT_DIR$/SQLiteDataProcessing/clientLoginEventUtility.py" />
-        <option value="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" />
-        <option value="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/AddSheet6ExpandedWechatReferrer.py" />
+        <option value="$PROJECT_DIR$/SQLiteQuery/capitalQuery.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/accountCapital.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py" />
+        <option value="$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py" />
+        <option value="$PROJECT_DIR$/OracleQuery/getWechatReferrer.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/playground3.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" />
+        <option value="$PROJECT_DIR$/SQLiteToExcel/playground4.py" />
         <option value="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="695" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="655" />
+    <option name="y" value="640" />
     <option name="width" value="1200" />
-    <option name="height" value="1070" />
+    <option name="height" value="333" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -233,6 +279,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,18 +290,17 @@
             <path>
               <item name="ExcelProcessingTool" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExcelProcessingTool" type="462c0819:PsiDirectoryNode" />
-              <item name="SQLiteDataProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="ExcelToSQLite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExcelProcessingTool" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExcelProcessingTool" type="462c0819:PsiDirectoryNode" />
-              <item name="SQLiteQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLiteToExcel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,11 +309,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ExcelProcessingTool\SQLiteDataProcessing" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ExcelProcessingTool\input\clientLogin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ExcelProcessingTool\SQLiteDataProcessing" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,28 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AddSheet6ExpandedWechatReferrer">
-    <configuration name="AddSheet6ExpandedWechatReferrer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ExcelProcessingTool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLiteToExcel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLiteToExcel/AddSheet6ExpandedWechatReferrer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.AddSheet6WechatReferrer">
     <configuration name="AddSheet6WechatReferrer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExcelProcessingTool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -325,7 +350,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="accValQuery" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="getSheet2FromSQLite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExcelProcessingTool" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -333,11 +358,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLiteQuery" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLiteToExcel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLiteQuery/accValQuery.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getSheet3FromSQLite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ExcelProcessingTool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLiteToExcel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -367,7 +413,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="importACCVALToSQLite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="playground3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExcelProcessingTool" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,11 +421,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExcelToSQLite" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SQLiteToExcel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLiteToExcel/playground3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -390,11 +436,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AddSheet6ExpandedWechatReferrer" />
-        <item itemvalue="Python.getSheet6FromSQLite" />
         <item itemvalue="Python.AddSheet6WechatReferrer" />
-        <item itemvalue="Python.accValQuery" />
-        <item itemvalue="Python.importACCVALToSQLite" />
+        <item itemvalue="Python.getSheet6FromSQLite" />
+        <item itemvalue="Python.getSheet2FromSQLite" />
+        <item itemvalue="Python.getSheet3FromSQLite" />
+        <item itemvalue="Python.playground3" />
       </list>
     </recent_temporary>
   </component>
@@ -412,22 +458,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8660377" visible="true" weight="0.20277411" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8660377" visible="true" weight="0.13011889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.13396226" side_tool="true" weight="0.25759578" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.04249292" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8130779" visible="true" weight="0.21954674" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5488771" visible="true" weight="0.49433428" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993395" weight="0.07648725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.18692206" side_tool="true" visible="true" weight="0.21954674" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45112285" side_tool="true" visible="true" weight="0.09348442" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -454,130 +500,245 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/core/indexes/base.py">
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/desyyb.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="4374" selection-start-line="4374" selection-end-line="4374" />
+        <state relative-caret-position="19">
+          <caret line="360" selection-end-line="405" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OracleQuery/getWechatRefferer.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/core/generic.py">
+    <entry file="file://$PROJECT_DIR$/SQLiteQuery/accValQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33554">
-          <caret line="1815" selection-start-line="1815" selection-end-line="1815" />
+        <state>
+          <caret selection-end-line="20" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/xlwt/Worksheet.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/util/_decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20539">
-          <caret line="1087" selection-start-line="1087" selection-end-line="1087" />
+        <state relative-caret-position="3439">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteQuery/capitalQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/accountCapital.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/xlrd/book.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="155">
           <caret line="475" selection-start-line="475" selection-end-line="475" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/io/excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="717" selection-start-line="717" selection-end-line="717" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UpdateSQliteTables/updateNewAccount.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="228">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="e#95#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/clientTradeEventUtility.py">
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getExpandedSheet3FromSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="448">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/xlwt/Workbook.py">
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importclientlogindays03150430.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="709" selection-start-line="709" selection-end-line="709" />
+        <state relative-caret-position="448">
+          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importclientlogindays05010513.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importInertialTestersToSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="429">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/leftMarketPerQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/newregQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="101" lean-forward="true" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/simTradeQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="4" selection-start-line="10" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/kcbActQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importKCBActSimTrade.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="467">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importMarketDepToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importMarketPerToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/import模板.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-787">
+          <caret line="3" column="2" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdateSQliteTables/updateAccount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-901" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/xlrd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1786">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/io/excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7524">
+          <caret line="423" selection-start-line="423" selection-end-line="423" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayATradeUtility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayInCapitalUtility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/clientLoginEventUtility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2432">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/clientTradeEventUtility.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteQuery/leftMarketPerQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6ExpandedWechatReferrer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="97" selection-end-column="25" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="44" column="18" selection-start-line="23" selection-start-column="1" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importUsrValueToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OracleQuery/getWechatReferrer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
@@ -586,206 +747,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheetFromSQLite模板.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="120" />
+        <state relative-caret-position="171">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getaTradeSheetFromSQLite.py">
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importCapitalToSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSimTradeSheetFromSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/source2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/tes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/source.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/newAccountQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="304">
+          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SQLiteQuery/inertialTestersQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        <state relative-caret-position="287">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="50" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/deshlw.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="73" column="13" selection-start-line="71" selection-start-column="8" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/desyyb.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="360" selection-end-line="405" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <element signature="e#43#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2470">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="142" selection-start-line="13" selection-start-column="142" selection-end-line="13" selection-end-column="142" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importTradeLogToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayATradeUtility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/import模板.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="2" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importATradeToSQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,10 +782,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importACCVALToSQLite.py">
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="342">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/source.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSimTradeSheetFromSQLite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getaTradeSheetFromSQLite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getExpandedSheet3FromSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importSimTradeToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="51" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
@@ -812,28 +829,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet2FromSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2337">
-          <caret line="131" column="64" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="64" />
+        <state relative-caret-position="6004">
+          <caret line="326" column="1" selection-start-line="326" selection-start-column="1" selection-end-line="326" selection-end-column="1" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewAccountToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importClientLoginFolderToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importHisclientLoginEventToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#43#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet6FromSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5529">
-          <caret line="312" column="88" selection-start-line="312" selection-start-column="88" selection-end-line="312" selection-end-column="88" />
+        <state relative-caret-position="2926">
+          <caret line="175" column="95" selection-start-line="175" selection-start-column="12" selection-end-line="175" selection-end-column="95" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6ExpandedWechatReferrer.py">
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/getSheet3FromSQLite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="1862">
+          <caret line="103" column="14" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importNewregToSQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelToSQLite/importAccountToSQlite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/playground4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
@@ -843,57 +920,10 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="7049">
-            <caret line="371" column="25" selection-start-line="371" selection-start-column="25" selection-end-line="371" selection-end-column="25" />
+          <first_editor relative-caret-position="480">
+            <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddNewRegWechatReferrer.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteToExcel/AddSheet6WechatReferrer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="96" selection-end-column="25" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/clientLoginEventUtility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2432">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteQuery/accValQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OracleQuery/getWechatReferrer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLiteDataProcessing/userDayInCapitalUtility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
         </state>
       </provider>
     </entry>

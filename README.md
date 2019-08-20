@@ -7,7 +7,7 @@
 6. <a href="#运行操作指南">运行操作指南</a> 
 7. <a href="#业务逻辑指南">业务逻辑指南</a> 
 
-Notice：该项目是由python写成的excel数据处理工具，同时引入sqlite实现数据的读取/存储过程。此repo只上传Python代码，数据应存放于input文件夹和output文件夹中，现为空，请按照该文档中的<a href="#源文件结构">【文件结构和命名规则】</a>放置文件。此repo尚未上传数据库文件，请根据table schemma建立，存放于本地 c:/sqlite/db/xxxx.db
+@Notice：该项目是由python写成的excel数据处理工具，同时引入sqlite实现数据的读取/存储过程。此repo只上传Python代码，数据应存放于input文件夹和output文件夹中，现为空，请按照该文档中的<a href="#源文件结构">【文件结构和命名规则】</a>放置文件。此repo尚未上传数据库文件，请根据table schemma建立，存放于本地 c:/sqlite/db/xxxx.db
 
 ## 可能造成程序跑不了的问题
 1. excel 文件命名/拓展名没按规则： 
@@ -371,12 +371,28 @@ Notice：该项目是由python写成的excel数据处理工具，同时引入sql
       
   * 生成ACC + VAL，输出新开户用户转化
   1. prerequiste: sheet2 
-  2. newACC + clientlogin + capital + aTtrade + ACCVALPrevious.xlsx/ACC+VAL      
-  3. 跑完以后找出ACCVAL中的注销人员, 这些注销人员应当能在上一次跑出来的ACCVALPrevious里还有记录。
+  2. newACC 
+  3. clientlogin
+  4. Tradelog 
+  5. capital 
+  6. aTtrade 
+  7. ACCVALPrevious.xlsx/ACC+VAL      
+  8. 跑完以后找出ACCVAL中的注销人员, 这些注销人员应当能在上一次跑出来的ACCVALPrevious里还有记录。
    对比后，如果登录/入金/跟投/交易少了，可能是因为为注销人员的记录在数据库里删除了,还是保留ACCVALPrevious的值。
    如果登录/入金/跟投/交易的记录多了，可能是销户的那个星期，也就是用户还存在的最后一个星期还进行了某些行为，
    而且虽然销户了但是记录还没来得及删除，保留新的ACCVAL跑出来的结果。
-----
+
+## 数据核对
+    ACC + VAL: 
+    1. Account表里存的是AccPrevious表格
+    2. accval里存的是AccPrevious表格的值
+    3. ACC+VAL里面的人数 = newAcc人数 (筛玩TJRSJ为空的人数）+ ACCVAL筛选出的销户人数
+    4. ACC+VAL里面的离职人数 = 销户人的离职人数 +  newACC里筛完TJRSJ的人后对应的离职人员人数  
+    5. ClientLogin表格检查更新  + ACC+VAL里有效登录抽查（登录天数第五天日期）
+    6. Tradelog表格检查更新 + ACC+VAL里有效交易抽查（首次交易日期） 
+    7. Capital表格检查更新 + ACC+VAL里有效入金抽查（用户总资产达到1000的那一天）
+    8. ATrade表格检查更新 + ACC+VAL里有效跟投抽查（用户首次跟投的那一天）
+
 ## 业务逻辑指南
 * [营销关系补充](./notes/营销关系补充.md) 
 

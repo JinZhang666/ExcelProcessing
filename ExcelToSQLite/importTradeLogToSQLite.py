@@ -65,4 +65,4 @@ def importTradeLogToSQLite():
             row = row + 1
         print("row number: ", row)
 
-importTradeLogToSQLite()
+#importTradeLogToSQLite()

@@ -65,5 +65,5 @@ def importInertialTestersToSQLite():
             row = row + 1
         print("row number: ", row)
 
-importInertialTestersToSQLite()
+#importInertialTestersToSQLite()
 
