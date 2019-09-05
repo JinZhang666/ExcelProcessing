@@ -323,8 +323,8 @@ class getSheet2FromSQLite:
         return self.internetReferUsers
 
 # generate sheet2 excel
-#sheet2 = getSheet2FromSQLite()
-#sheet2.generateSheet2ExcelFromSQLite()
+sheet2 = getSheet2FromSQLite()
+sheet2.generateSheet2ExcelFromSQLite()
 
 
 #print(len(sheet2.getInternetReferUsers()))

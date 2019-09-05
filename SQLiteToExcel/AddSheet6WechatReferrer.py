@@ -8,7 +8,7 @@ import cx_Oracle
 import os
 os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 #from SQLiteToExcel.getSheet6FromSQLite import *
-from OracleQuery.getWechatReferrer import *
+from OracleQuery.getWechatReferrer2 import *
 import xlrd
 import xlwt
 
@@ -26,17 +26,14 @@ def addSheet6WechatReferrer():
              '营销部名称','销户','离职','当月红包']]
 
     df['登录月份'] = df['登录月份'].astype('str')
-    # df1['OperateTime'] = df1['OperateTime'].astype('str')
-    # df1['OperateTime'] = df1['OperateTime'].astype('str')
-    # df1['OperateTime'] = df1['OperateTime'].astype('str')
-    # df1['OperateTime'] = df1['OperateTime'].astype('str')
+    df['落地部代码'] = df['落地部代码'].astype('str')
 
     '''
     根据getwechatreferrer得出的dictionary
     directory结构：用户手机号 + wechat referrer 信息
     { 13003278253 {'REFERRER_ID': '274c5d4788f945878371a8ac71d5d30a', '海报id': '01', 'NICK_NAME': '周锋', 'REAL_NAME': '周锋', 'PHONE': '13813555536'} } 
     '''
-    myDic = getWechatReferrer(df).getFinalResult()
+    myDic = getWechatReferrer2(df).getFinalResult()
     for user_phone in myDic:
         print(user_phone, myDic[user_phone])
 
@@ -75,6 +72,7 @@ def addSheet6WechatReferrer():
     dst.write(0, 26, 'REAL_NAME')
     dst.write(0, 27, 'PHONE')  # I
     dst.write(0, 28, '海报id')  # I
+    dst.write(0, 29, '营销渠道')
 
 
 
@@ -90,6 +88,7 @@ def addSheet6WechatReferrer():
             dst.write(r, 26, myDic[row['开户手机号']]['REAL_NAME'])
             dst.write(r, 27, myDic[row['开户手机号']]['PHONE'])
             dst.write(r, 28, myDic[row['开户手机号']]['海报id'])
+            dst.write(r, 29, myDic[row['开户手机号']]['推荐渠道'])
         r = r + 1
 
     workbookdes.save('../output/ACC+VAL+WECHAT.xls')

@@ -34,6 +34,18 @@ class newAccountQuery:
                 result.append(str(khusrmobile))
             return result
 
+    #根据用户的客户号拿到用户的营销关系
+    def getMarketRelationByKHCode(self, khcode):
+        with sqlite3.connect('C:\sqlite\db\hxdata.db') as db:
+            sqStatement = 'SELECT marketdepid, marketdepname, marketperid, marketpername, marketpertype, marketpermobile FROM newaccount WHERE khcode = ?'
+            result = db.execute(sqStatement, [khcode, ])
+
+            for marketdepid, marketdepname, marketperid, marketpername, marketpertype, marketpermobile in db.execute(sqStatement, [khcode, ]):
+                print(khcode, marketdepid, marketdepname, marketperid, marketpername, marketpertype, marketpermobile)
+                return
+            print(str(khcode))
+            #return result
+
 
 
 

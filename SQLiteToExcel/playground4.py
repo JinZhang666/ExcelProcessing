@@ -22,9 +22,4 @@ def playground3():
         results = []
 
 
-
-
-
-
-
 playground3()
