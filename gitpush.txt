@@ -1,0 +1,9 @@
+/*******git Command Lines**********/
+$ git add .
+$ git rm --cached -r CompareTool hisOutput output dataTool.xls input input_template venv hisInput Playground
+$ git commit -m 'This is a message'
+$ git push -u origin master
+/*******git Command Lines**********/
+
+
+
